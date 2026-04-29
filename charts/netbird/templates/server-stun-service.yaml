@@ -11,6 +11,8 @@ metadata:
 {{- end }}
 spec:
   type: {{ .Values.server.stunService.type }}
+  externalTrafficPolicy: Local
+
   ports:
     - name: stun
       port: {{ .Values.server.stunService.port }}
